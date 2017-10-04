@@ -1,0 +1,19 @@
+Normas de Equipo
+Estándares de programación: 
+•	Google
+Lenguajes de programación (y/o frameworks): 
+•	Java 8
+IDE:
+•	NetBeans
+DBMS: 
+•	MySQL 
+Castigos: 
+•	10 min tolerancia
+•	+10 min multa de 5 bs 
+•	Inasistencia 20bs
+Reuniones:
+•	Lunes: 9:45 o 11:15 
+•	Martes: 8:15
+•	Miércoles: tarde/noche 
+•	Jueves: toda la tarde 
+•	Viernes: 8:15
