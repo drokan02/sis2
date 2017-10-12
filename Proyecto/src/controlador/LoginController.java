@@ -18,7 +18,7 @@ import javafx.scene.control.Label;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javafx.stage.Window;
-import modelo.Archivo;
+import modelo.VO.Documento;
 import sun.awt.DesktopBrowse;
 
 
@@ -42,7 +42,7 @@ public class LoginController implements Initializable {
 
   @FXML
   void makeLogin(ActionEvent event) {
-        
+        Documento doc = new Documento();
   }
   
   @Override

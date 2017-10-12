@@ -3,24 +3,23 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package modelo;
+package modelo.VO;
 
 import java.io.File;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
-import javax.swing.JOptionPane;
 
 /**
  *
  * @author Raul
  */
-public class Archivo {
+public class Documento {
     private File archivo;
     
-    public Archivo(){
+    public Documento(){
         fileChooser();
     }
-    public Archivo(File archivo){
+    public Documento(File archivo){
     this.archivo = archivo;
     }
     private void fileChooser(){
@@ -33,8 +32,7 @@ public class Archivo {
         );
         Stage stage = new Stage();
         archivo = fileChooser.showOpenDialog(stage);
-        if(archivo != null)
-            JOptionPane.showMessageDialog(null, "bien");
+        
     }
     public File getArchivo() {
         return archivo;
@@ -44,4 +42,14 @@ public class Archivo {
         this.archivo = archivo;
     }
     
+    public boolean validarDocumento(String [] extenciones){
+        boolean res = true;
+        int i = 0;
+        while(i < extenciones.length && res == true){
+            if(!archivo.getName().endsWith(extenciones[i]))
+                res = false;
+            i++;
+        }
+        return res;
+    }
 }
