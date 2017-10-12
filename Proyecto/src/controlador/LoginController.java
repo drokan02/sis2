@@ -13,8 +13,7 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Label;
-
+import vista.validadores.TextCustom;
 
 
 /**
@@ -24,7 +23,7 @@ import javafx.scene.control.Label;
 public class LoginController implements Initializable {
     
   @FXML
-  private JFXTextField userNameInput;
+  private TextCustom userNameInput;
 
   @FXML
   private JFXButton loginButton;
