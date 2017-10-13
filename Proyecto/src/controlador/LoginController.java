@@ -8,12 +8,17 @@ package controlador;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.stage.Stage;
 
 /**
  *
@@ -26,6 +31,9 @@ public class LoginController implements Initializable {
 
     @FXML
     private JFXButton loginButton;
+    
+    @FXML
+    private JFXButton signUpButton;
 
     @FXML
     private JFXPasswordField passwordInput;
@@ -41,6 +49,20 @@ public class LoginController implements Initializable {
             alert.showAndWait();
         }
     }
+    
+    @FXML
+    void goToSignUp(ActionEvent event) throws IOException{
+      Stage stage; 
+      Parent root;        
+      stage=(Stage) signUpButton.getScene().getWindow();
+      //load up OTHER FXML document
+      root = FXMLLoader.load(getClass().getResource("/vista/FXMLSignUp.fxml"));
+      //create a new scene with root and set the stage
+      Scene scene = new Scene(root);
+      stage.setScene(scene);
+      stage.show();
+    }
+
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
