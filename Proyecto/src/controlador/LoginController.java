@@ -8,6 +8,7 @@ package controlador;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -15,10 +16,15 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Label;
+import javafx.stage.FileChooser;
+import javafx.stage.Stage;
+import javafx.stage.Window;
+import modelo.VO.Documento;
+import sun.awt.DesktopBrowse;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
-import javafx.stage.Stage;
 
 /**
  *
@@ -40,6 +46,7 @@ public class LoginController implements Initializable {
 
     @FXML
     public void makeLogin(ActionEvent event) {
+        Documento doc = new Documento();
         if (Validators.validateLetters(userNameInput.toString()) && !passwordInput.toString().isEmpty()) {
             System.out.println("succes");
         } else {
