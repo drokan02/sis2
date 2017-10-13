@@ -7,12 +7,12 @@ package controlador;
 
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXPasswordField;
+import com.jfoenix.controls.JFXTextField;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import vista.validadores.TextCustomField;
 
 
 /**
@@ -22,7 +22,7 @@ import vista.validadores.TextCustomField;
 public class LoginController implements Initializable {
     
   @FXML
-  private TextCustomField userNameInput;
+  private JFXTextField userNameInput;
 
   @FXML
   private JFXButton loginButton;
