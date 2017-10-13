@@ -13,32 +13,38 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Label;
-
-
+import javafx.scene.control.Alert;
 
 /**
  *
  * @author pc
  */
 public class LoginController implements Initializable {
-    
-  @FXML
-  private JFXTextField userNameInput;
 
-  @FXML
-  private JFXButton loginButton;
+    @FXML
+    private JFXTextField userNameInput;
 
-  @FXML
-  private JFXPasswordField passwordInput;
+    @FXML
+    private JFXButton loginButton;
 
-  @FXML
-  void makeLogin(ActionEvent event) {
-  }
-  
-  @Override
-  public void initialize(URL url, ResourceBundle rb) {
-    // TODO
-  }  
-    
+    @FXML
+    private JFXPasswordField passwordInput;
+
+    @FXML
+    public void makeLogin(ActionEvent event) {
+        if (Validators.validateLetters(userNameInput.toString()) && !passwordInput.toString().isEmpty()) {
+            System.out.println("succes");
+        } else {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error in Login");
+            alert.setContentText("The fields can't be empties or UserName invalid");
+            alert.showAndWait();
+        }
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+        // TODO
+    }
+
 }
