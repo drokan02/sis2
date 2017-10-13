@@ -9,18 +9,19 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="270.0" prefWidth="322.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.LoginController">
+<AnchorPane id="AnchorPane" prefHeight="640.0" prefWidth="360.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.LoginController">
   <children>
     <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
-      <Pane layoutX="14.0" layoutY="14.0" prefHeight="245.0" prefWidth="294.0" style="-fx-background-color: #ffffff;">
+      <Pane layoutY="80.0" prefHeight="522.0" prefWidth="360.0" style="-fx-background-color: #ffffff;">
          <children>
-            <JFXTextField id="userNameInput" fx:id="userNameInput" focusColor="#09b6bc" layoutX="69.0" layoutY="83.0" prefHeight="25.0" prefWidth="157.0" promptText="Username" />
-            <JFXPasswordField id="passwordInput" fx:id="passwordInput" focusColor="#09b6bc" layoutX="69.0" layoutY="123.0" prefHeight="25.0" prefWidth="157.0" promptText="Password" />
-            <JFXButton id="loginButton" fx:id="loginButton" buttonType="RAISED" layoutX="191.0" layoutY="183.0" onAction="#makeLogin" prefHeight="36.0" prefWidth="88.0" ripplerFill="WHITE" style="-fx-background-color: #2196F3;" text="Login" textFill="WHITE" />
+            <JFXTextField id="userNameInput" fx:id="userNameInput" focusColor="#09b6bc" layoutX="98.0" layoutY="184.0" prefHeight="25.0" prefWidth="157.0" promptText="Username" />
+            <JFXPasswordField id="passwordInput" fx:id="passwordInput" focusColor="#09b6bc" layoutX="98.0" layoutY="224.0" prefHeight="25.0" prefWidth="157.0" promptText="Password" />
+            <JFXButton id="loginButton" fx:id="loginButton" buttonType="RAISED" layoutX="225.0" layoutY="284.0" onAction="#makeLogin" prefHeight="36.0" prefWidth="88.0" ripplerFill="WHITE" style="-fx-background-color: #2196F3;" text="Login" textFill="WHITE" />
          </children>
-         <effect>
-            <DropShadow blurType="GAUSSIAN" />
-         </effect>
       </Pane>
+      <Pane prefHeight="24.0" prefWidth="360.0" style="-fx-background-color: #000000;" />
+      <JFXToolbar layoutY="24.0" prefHeight="56.0" prefWidth="360.0" style="-fx-background-color: #2196F3;" />
+      <Pane layoutY="602.0" prefHeight="48.0" prefWidth="360.0" style="-fx-background-color: #000000;" />
+      <JFXButton id="loginButton" fx:id="signUpButton" buttonType="RAISED" layoutX="127.0" layoutY="364.0" onAction="#goToSignUp" prefHeight="36.0" prefWidth="88.0" ripplerFill="WHITE" style="-fx-background-color: #2196F3;" text="Sign Up" textFill="WHITE" />
   </children>
 </AnchorPane>
