@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package controlador;
 
 import com.jfoenix.controls.JFXButton;
@@ -26,54 +21,50 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 
-/**
- *
- * @author pc
- */
 public class LoginController implements Initializable {
 
-    @FXML
-    private JFXTextField userNameInput;
+  @FXML
+  private JFXTextField userNameInput;
 
-    @FXML
-    private JFXButton loginButton;
-    
-    @FXML
-    private JFXButton signUpButton;
+  @FXML
+  private JFXButton loginButton;
 
-    @FXML
-    private JFXPasswordField passwordInput;
+  @FXML
+  private JFXButton signUpButton;
 
-    @FXML
-    public void makeLogin(ActionEvent event) {
-        Documento doc = new Documento();
-        if (Validators.validateLetters(userNameInput.toString()) && !passwordInput.toString().isEmpty()) {
-            System.out.println("succes");
-        } else {
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Error in Login");
-            alert.setContentText("The fields can't be empties or UserName invalid");
-            alert.showAndWait();
-        }
+  @FXML
+  private JFXPasswordField passwordInput;
+
+  @FXML
+  public void makeLogin(ActionEvent event) {
+    Documento doc = new Documento();
+    if (Validators.validateLetters(userNameInput.toString()) && !passwordInput.toString().isEmpty()) {
+      System.out.println("succes");
+    } else {
+      Alert alert = new Alert(Alert.AlertType.ERROR);
+      alert.setTitle("Error in Login");
+      alert.setContentText("The fields can't be empties or UserName invalid");
+      alert.showAndWait();
     }
-    
-    @FXML
-    void goToSignUp(ActionEvent event) throws IOException{
-      Stage stage; 
-      Parent root;        
-      stage=(Stage) signUpButton.getScene().getWindow();
-      //load up OTHER FXML document
-      root = FXMLLoader.load(getClass().getResource("/vista/FXMLSignUp.fxml"));
-      //create a new scene with root and set the stage
-      Scene scene = new Scene(root);
-      stage.setScene(scene);
-      stage.show();
-    }
+  }
+
+  @FXML
+  void goToSignUp(ActionEvent event) throws IOException{
+    Stage stage; 
+    Parent root;        
+    stage=(Stage) signUpButton.getScene().getWindow();
+    //load up OTHER FXML document
+    root = FXMLLoader.load(getClass().getResource("/vista/FXMLSignUp.fxml"));
+    //create a new scene with root and set the stage
+    Scene scene = new Scene(root);
+    stage.setScene(scene);
+    stage.show();
+  }
 
 
-    @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        // TODO
-    }
+  @Override
+  public void initialize(URL url, ResourceBundle rb) {
+     // TODO
+  }
 
 }
