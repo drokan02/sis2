@@ -1,4 +1,4 @@
-package modelo.conexion;
+package modelo;
 
 /**
  *

@@ -15,7 +15,7 @@ import javafx.scene.control.Label;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javafx.stage.Window;
-import modelo.VO.Documento;
+import modelo.Documento;
 import sun.awt.DesktopBrowse;
 import javafx.scene.Parent;
 import javafx.scene.Scene;

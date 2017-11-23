@@ -1,4 +1,4 @@
-package modelo.VO;
+package modelo;
 
 import java.awt.Desktop;
 import java.io.File;
