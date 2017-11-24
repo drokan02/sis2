@@ -15,7 +15,7 @@ import javafx.scene.control.Label;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javafx.stage.Window;
-import modelo.Documento;
+import modelo.Document;
 import sun.awt.DesktopBrowse;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -37,7 +37,7 @@ public class LoginController implements Initializable {
 
   @FXML
   public void makeLogin(ActionEvent event) {
-    Documento doc = new Documento();
+    Document doc = new Document();
     if (Validators.validateLetters(userNameInput.toString()) && !passwordInput.toString().isEmpty()) {
       System.out.println("succes");
     } else {
